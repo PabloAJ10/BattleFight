@@ -22,6 +22,15 @@ namespace BattleFight.Services
             SaveChanges();
         }
 
+        public List<Equipo> filtroUsuario2(string UsuarioResponsable)
+        {
+            var productosFiltrados =
+                equipos.Where(x => x.UsuarioResponsable == UsuarioResponsable).ToList();
+            if (productosFiltrados != null)
+                return (List<Equipo>)productosFiltrados;
+            else throw new Exception("No existen productos con ese usuario responsable");
+        }
+
         //Método de mostrar
         public List<Equipo> mostrarEquipo()
         {
@@ -72,10 +81,26 @@ namespace BattleFight.Services
             SaveChanges();
         }
 
+        public List<Torneo> filtroUsuario(string UsuarioResponsable)
+        {
+            var torneosFiltrados = torneos.Where(x => x.UsuarioResponsable == UsuarioResponsable).ToList();
+            if (torneosFiltrados != null)
+                return (List<Torneo>)torneosFiltrados;
+            else throw new Exception("No existen productos con ese usuario responsable");
+        }
+
         //Método de mostrar
         public List<Torneo> mostrarTorneo()
         {
             return torneos.ToList();
+        }
+
+        public Torneo buscarTorneo(int id)
+        {
+            var  torneoBuscado = torneos.FirstOrDefault(x => x.Id == id);
+            if (torneoBuscado != null)
+                return torneoBuscado;
+            else throw new Exception("Este producto no está registrado");
         }
 
         //Método de eliminar

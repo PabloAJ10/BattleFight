@@ -1,0 +1,45 @@
+﻿@model BattleFight.Models.Torneo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Torneo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CodigoNumerico" class="control-label"></label>
+                <input asp-for="CodigoNumerico" class="form-control" />
+                <span asp-validation-for="CodigoNumerico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PremioDolar" class="control-label"></label>
+                <input asp-for="PremioDolar" class="form-control" />
+                <span asp-validation-for="PremioDolar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoriaEnfrentar" class="control-label"></label>
+                <input asp-for="CategoriaEnfrentar" class="form-control" />
+                <span asp-validation-for="CategoriaEnfrentar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioResponsable" class="control-label"></label>
+                <input asp-for="UsuarioResponsable" class="form-control" />
+                <span asp-validation-for="UsuarioResponsable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
