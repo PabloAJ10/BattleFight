@@ -1,0 +1,59 @@
+﻿@model BattleFight.Models.Equipo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Equipo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreEquipo" class="control-label"></label>
+                <input asp-for="NombreEquipo" class="form-control" />
+                <span asp-validation-for="NombreEquipo" class="text-danger"></span>
+            </div>
+            <label>Nombre del Equipo:</label>
+            <input type="text" name="NombreEquipo" required /><br />
+
+            <label>Jugador 1:</label>
+            <input type="text" name="Jugador1" required /><br />
+
+            <label>Jugador 2:</label>
+            <input type="text" name="Jugador2" required /><br />
+
+            <label>Jugador 3:</label>
+            <input type="text" name="Jugador3" required /><br />
+
+            <label>Jugador 4:</label>
+            <input type="text" name="Jugador4" required /><br />
+
+            <label>Puntaje:</label>
+            <input type="number" name="Puntaje" min="1" max="100" required /><br />
+
+            <label>Categoría:</label>
+            <select name="Categoria" required>
+                <option value="Beginner">Beginner</option>
+                <option value="Middle">Middle</option>
+                <option value="Expert">Expert</option>
+            </select><br />
+            <div class="form-group">
+                <label asp-for="UsuarioResponsable" class="control-label"></label>
+                <input asp-for="UsuarioResponsable" class="form-control" />
+                <span asp-validation-for="UsuarioResponsable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

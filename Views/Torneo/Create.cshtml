@@ -22,9 +22,16 @@
                 <input asp-for="PremioDolar" class="form-control" />
                 <span asp-validation-for="PremioDolar" class="text-danger"></span>
             </div>
+            <label asp-for="FechaTorneo" class="control-label"></label>
+            <input asp-for="FechaTorneo" class="form-control" />
+            <span asp-validation-for="FechaTorneo" class="text-danger"></span>
             <div class="form-group">
                 <label asp-for="CategoriaEnfrentar" class="control-label"></label>
-                <input asp-for="CategoriaEnfrentar" class="form-control" />
+                <select id="CategoriaEnfrentar" name="CategoriaEnfrentar" required>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Middle">Middle</option>
+                    <option value="Expert">Expert</option>
+                </select><br><br>
                 <span asp-validation-for="CategoriaEnfrentar" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -42,4 +49,3 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-

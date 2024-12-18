@@ -83,20 +83,10 @@ namespace BattleFight.Controllers
             return View();
         }
 
-        /*
+        
         // GET: ProductoController/Delete/5
-        public ActionResult Delete(string categoria)
-        {
-            try
-            {
-                var equiposBuscados = service.buscarEquipo(categoria);
-                service.eliminarEquipo(equiposBuscados);
-                return RedirectToAction("Index");
-            }
-            catch (Exception) { }
-            return View();
+        
         
         }
-        */
+        
     }
-}

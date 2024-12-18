@@ -37,11 +37,12 @@ namespace BattleFight.Services
             return equipos.ToList();
         }
 
+
         //Método de buscar
         public List<Equipo> buscarEquipo(string categoria)
         {
             var equiposBuscados = equipos.Where(x => x.Categoria == categoria).ToList();
-            if (equiposBuscados.Any())
+            if (equiposBuscados != null)
                 return equiposBuscados;
             else
                 throw new Exception("No hay equipos registrados en esta categoría");

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BattleFight.Models.Torneo>
+﻿@model IEnumerable<BattleFight.Models.Equipo>
 
 @{
     ViewData["Title"] = "Index";
@@ -16,16 +16,16 @@
                 @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CodigoNumerico)
+                @Html.DisplayNameFor(model => model.NombreEquipo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PremioDolar)
+                @Html.DisplayNameFor(model => model.NombreJugador)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaTorneo)
+                @Html.DisplayNameFor(model => model.Puntaje)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CategoriaEnfrentar)
+                @Html.DisplayNameFor(model => model.Categoria)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UsuarioResponsable)
@@ -40,23 +40,23 @@
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CodigoNumerico)
+                @Html.DisplayFor(modelItem => item.NombreEquipo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PremioDolar)
+                @Html.DisplayFor(modelItem => item.NombreJugador)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FechaTorneo)
+                @Html.DisplayFor(modelItem => item.Puntaje)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CategoriaEnfrentar)
+                @Html.DisplayFor(modelItem => item.Categoria)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UsuarioResponsable)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Edit", "Edit", new { id=item.Categoria }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Categoria })
             </td>
         </tr>
 }
